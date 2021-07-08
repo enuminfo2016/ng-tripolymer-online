@@ -15,28 +15,28 @@ export class HometwoBannerComponent implements OnInit {
 
     mainBannerItem = [
         {
-            title: 'Bedroom Deals Up To 40% OFF',
-            paragraph: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+            title: 'Medical Lab Components',
+            paragraph: 'It has been made by A grade raw material. Also ensured quality tested and complete sterialized before delivery!',
             buttonIcon: 'bx bx-shopping-bag',
             buttonText: 'SHOP OUR PRODUCTS',
             buttonLink: 'shop-full-width-2',
-            image: 'assets/img/banner-img1.png'
+            image: 'assets/img/tripolymer/medical-urin-bottles-1.png'
         },
         {
-            title: 'We Serve Your Dream Furniture',
-            paragraph: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+            title: '20 Liter Jar bottle caps',
+            paragraph: 'We always ensure to use the A grade material and quality tested!.',
             buttonIcon: 'bx bx-shopping-bag',
             buttonText: 'SHOP OUR PRODUCTS',
             buttonLink: 'shop-full-width-2',
-            image: 'assets/img/banner-img2.png'
+            image: 'assets/img/tripolymer/jar-bottles-cap-lot-2.png'
         },
         {
-            title: 'Baby Essentials Up To 50% OFF',
-            paragraph: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+            title: 'Water Bottle Thread caps with any size',
+            paragraph: 'We always ensure to use the A grade material and quality tested!.',
             buttonIcon: 'bx bx-shopping-bag',
             buttonText: 'SHOP OUR PRODUCTS',
             buttonLink: 'shop-full-width-2',
-            image: 'assets/img/banner-img3.png'
+            image: 'assets/img/tripolymer/thread-cap-4.png'
         }
     ]
 

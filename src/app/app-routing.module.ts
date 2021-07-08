@@ -30,7 +30,8 @@ import { StickyProductPageComponent } from './components/pages/sticky-product-pa
 import { WishlistPageComponent } from './components/pages/wishlist-page/wishlist-page.component';
 
 const routes: Routes = [
-    {path: '', component: HomeDemoOneComponent},
+    {//path: '', component: HomeDemoOneComponent},
+        path: '', component: HomeDemoTwoComponent},
     {path: 'index-2', component: HomeDemoTwoComponent},
     {path: 'index-3', component: HomeDemoThreeComponent},
     {path: 'about', component: AboutPageComponent},

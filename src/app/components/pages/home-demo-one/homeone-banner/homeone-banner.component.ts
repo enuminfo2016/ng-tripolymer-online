@@ -63,7 +63,7 @@ export class HomeoneBannerComponent implements OnInit {
     bannerContactInfo = [
         {
             number: '+44 458 895 456',
-            email: 'hello@fiwan.com'
+            email: 'tripolymerpvtltd@gmail.com'
         }
     ]
 
