@@ -10,9 +10,6 @@ export class HometwoBannerComponent implements OnInit {
 
     constructor() { }
 
-    ngOnInit(): void {
-    }
-
     mainBannerItem = [
         {
             title: 'Medical Lab Components',
@@ -41,36 +38,38 @@ export class HometwoBannerComponent implements OnInit {
     ]
 
     homeSlidesOptions: OwlOptions = {
-		loop: true,
-		nav: true,
-		margin: 5,
-		dots: false,
-		autoplay: true,
-		autoHeight: true,
-		animateIn: 'fadeIn',
-		animateOut: 'fadeOut',
-		autoplayHoverPause: true,
-		navText: [
-			"<i class='bx bx-left-arrow-alt'></i>",
-			"<i class='bx bx-right-arrow-alt'></i>"
-		],
-		responsive: {
-			0: {
+        loop: true,
+        nav: true,
+        margin: 5,
+        dots: false,
+        autoplay: true,
+        autoHeight: true,
+        animateIn: 'fadeIn',
+        animateOut: 'fadeOut',
+        autoplayHoverPause: true,
+        navText: [
+            '<i class=\'bx bx-left-arrow-alt\'></i>',
+            '<i class=\'bx bx-right-arrow-alt\'></i>'
+        ],
+        responsive: {
+            0: {
                 items: 1
-			},
-			576: {
+            },
+            576: {
                 items: 1
-			},
-			768: {
+            },
+            768: {
                 items: 1
-			},
-			992: {
+            },
+            992: {
                 items: 1
-			},
-			1200: {
+            },
+            1200: {
                 items: 1
-			}
-		}
+            }
+        }
     }
 
+    ngOnInit(): void {
+    }
 }

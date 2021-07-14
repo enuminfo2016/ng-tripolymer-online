@@ -7,7 +7,7 @@ import { FormsModule } from '@angular/forms';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { SelectDropDownModule } from 'ngx-select-dropdown';
 
-import { AppRoutingModule } from './app-routing.module';
+import { Routes, RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { GalleryPageComponent } from './components/pages/gallery-page/gallery-page.component';
 import { ContactPageComponent } from './components/pages/contact-page/contact-page.component';
@@ -63,6 +63,35 @@ import { ShopLeftSidebarPageOneComponent } from './components/pages/shop-left-si
 import { ShopLeftSidebarPageTwoComponent } from './components/pages/shop-left-sidebar-page-two/shop-left-sidebar-page-two.component';
 import { ShopRightSidebarPageOneComponent } from './components/pages/shop-right-sidebar-page-one/shop-right-sidebar-page-one.component';
 import { ShopRightSidebarPageTwoComponent } from './components/pages/shop-right-sidebar-page-two/shop-right-sidebar-page-two.component';
+
+const routes: Routes = [
+  { path: '', component: HomeDemoTwoComponent },
+  { path: 'about', component: AboutPageComponent },
+  { path: 'shop-full-width-1', component: ShopFullWidthPageOneComponent },
+  { path: 'shop-full-width-2', component: ShopFullWidthPageTwoComponent },
+  { path: 'shop-left-sidebar-1', component: ShopLeftSidebarPageOneComponent },
+  { path: 'shop-left-sidebar-2', component: ShopLeftSidebarPageTwoComponent },
+  { path: 'shop-right-sidebar-1', component: ShopRightSidebarPageOneComponent },
+  { path: 'shop-right-sidebar-2', component: ShopRightSidebarPageTwoComponent },
+  { path: 'simple-product', component: SimpleProductPageComponent },
+  { path: 'slider-product', component: SliderProductPageComponent },
+  { path: 'sticky-product', component: StickyProductPageComponent },
+  { path: 'rooms', component: RoomsPageComponent },
+  { path: 'customer-service', component: CustomerServicePageComponent },
+  { path: 'profile-authentication', component: MyAccountPageComponent },
+  { path: 'order-tracking', component: OrderTrackingPageComponent },
+  { path: 'gallery', component: GalleryPageComponent },
+  { path: 'cart', component: CartPageComponent },
+  { path: 'checkout', component: CheckoutPageComponent },
+  { path: 'wishlist', component: WishlistPageComponent },
+  { path: 'blog-grid', component: BlogGridComponent },
+  { path: 'blog-right-sidebar', component: BlogRightSidebarComponent },
+  { path: 'blog-details', component: BlogDetailsComponent },
+  { path: 'faq', component: FaqPageComponent },
+  { path: 'coming-soon', component: ComingSoonPageComponent },
+  { path: 'contact', component: ContactPageComponent },
+  { path: '**', component: NotFoundPageComponent }
+];
 
 @NgModule({
   declarations: [
@@ -124,7 +153,7 @@ import { ShopRightSidebarPageTwoComponent } from './components/pages/shop-right-
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
+    RouterModule.forRoot(routes, { relativeLinkResolution: 'legacy' }),
     BrowserAnimationsModule,
     CarouselModule,
     NgxScrollTopModule,

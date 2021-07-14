@@ -16,5 +16,4 @@ export class NavbarStyleTwoComponent implements OnInit {
     toggleClass() {
         this.classApplied = !this.classApplied;
     }
-
 }

@@ -16,7 +16,7 @@ export class SubscribeComponent implements OnInit {
         {
             bgImage: 'assets/img/subscribe-bg.jpg',
             subTitle: 'GET UPDATES',
-            title: 'Our Newsletter'
+            title: ''
         }
     ]
 
