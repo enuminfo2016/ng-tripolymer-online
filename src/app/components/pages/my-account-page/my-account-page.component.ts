@@ -12,6 +12,7 @@ export class MyAccountPageComponent implements OnInit {
     ngOnInit(): void {
     }
 
+    // tslint:disable-next-line: member-ordering
     pageTitle = [
         {
             bgImage: 'assets/img/page-title-bg.jpg',

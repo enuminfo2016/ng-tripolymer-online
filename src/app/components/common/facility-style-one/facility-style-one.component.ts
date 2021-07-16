@@ -16,22 +16,22 @@ export class FacilityStyleOneComponent implements OnInit {
         {
             icon: 'bx bx-shopping-bag',
             title: 'Shop Online',
-            paragraph: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labo.'
+            paragraph: ''
         },
         {
             icon: 'bx bxs-plane-take-off',
             title: 'Free Shipping',
-            paragraph: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labo.'
+            paragraph: ''
         },
         {
             icon: 'bx bx-info-square',
             title: 'Return Policy',
-            paragraph: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labo.'
+            paragraph: ''
         },
         {
             icon: 'bx bx-check-shield',
             title: 'Secured Payments',
-            paragraph: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labo.'
+            paragraph: ''
         }
     ]
     facilityImage = [

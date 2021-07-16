@@ -3,6 +3,7 @@
         background-color: var(--mainColor);
     }
 }
+
 .facility-content {
     padding-right: 50px;
 
@@ -14,18 +15,21 @@
         &:last-child {
             margin-bottom: 0;
         }
+
         i {
             position: absolute;
             left: 0;
             top: 0;
             font-size: 40px;
         }
+
         h3 {
             font-size: 22px;
             margin-bottom: 12px;
         }
     }
 }
+
 .single-facility-box {
     margin-bottom: 30px;
     text-align: center;
@@ -50,15 +54,18 @@
             transform: translateY(-50%);
         }
     }
+
     h3 {
         font-size: 22px;
         margin-bottom: 12px;
         color: var(--whiteColor);
     }
+
     p {
         color: var(--whiteColor);
         opacity: 0.90;
     }
+
     &:hover {
         .icon {
             background-color: var(--whiteColor);
@@ -80,15 +87,18 @@
             i {
                 font-size: 30px;
             }
+
             h3 {
                 font-size: 18px;
             }
         }
     }
+
     .single-facility-box {
         h3 {
             font-size: 18px;
         }
+
         .icon {
             margin-bottom: 15px;
             width: 65px;
@@ -105,19 +115,27 @@
     .facility-content {
         display: flex;
         flex-wrap: wrap;
+
         margin: {
             right: -15px;
             left: -15px;
             bottom: 0;
-        };
+        }
+
+        ;
+
         .item {
             flex: 0 0 50%;
             max-width: 50%;
             margin-bottom: 30px !important;
+
             padding: {
                 left: 57px;
                 right: 15px;
-            };
+            }
+
+            ;
+
             i {
                 left: 15px;
             }
@@ -133,33 +151,44 @@
         padding-right: 0;
         display: flex;
         flex-wrap: wrap;
+
         margin: {
             right: -15px;
             left: -15px;
             bottom: 0;
-        };
+        }
+
+        ;
+
         .item {
             flex: 0 0 50%;
             max-width: 50%;
             margin-bottom: 30px !important;
+
             padding: {
                 left: 65px;
                 right: 15px;
-            };
+            }
+
+            ;
+
             i {
                 left: 15px;
                 font-size: 35px;
             }
+
             h3 {
                 font-size: 20px;
                 margin-bottom: 10px;
             }
         }
     }
+
     .single-facility-box {
         h3 {
             font-size: 20px;
         }
+
         .icon {
             width: 75px;
             height: 75px;
@@ -180,15 +209,7 @@
 }
 
 /* Min width 1200px to Max width 1355px */
-@media only screen and (min-width: 1200px) and (max-width: 1355px) {
-
-    
-
-}
+@media only screen and (min-width: 1200px) and (max-width: 1355px) {}
 
 /* Min width 1550px */
-@media only screen and (min-width: 1550px) {
-
-
-
-}
+@media only screen and (min-width: 1550px) {}

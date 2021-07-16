@@ -1,11 +1,12 @@
 <!-- Start Top Header Area -->
-    <section>
+<section>
     <div class="container-fluid">
         <div class="row align-items-center">
             <div class="col-lg-6 col-md-6">
                 <ul class="top-header-contact-info">
                     <li><a href="+44458895456"><i class="bx bx-phone-call"></i> +91 9686379363</a></li>
-                    <li><a href="mailto:tripolymerpvtltd@gmail.com"><i class="bx bx-email"></i> tripolymerpvtltd@gmail.com</a></li>
+                    <li><a href="mailto:tripolymerpvtltd@gmail.com"><i class="bx bx-email"></i>
+                            tripolymerpvtltd@gmail.com</a></li>
                 </ul>
             </div>
 
@@ -13,34 +14,7 @@
                 <div class="top-header-right">
                     <ul class="d-flex align-items-center justify-content-end">
                         <li>
-                            <div class="dropdown language-switcher d-inline-block">
-                                <button class="dropdown-toggle" type="button" (click)="toggleClass()">
-                                    <img src="assets/img/flag/us.jpg" class="shadow" alt="image">
-                                    <span>Eng <i class='bx bx-chevron-down'></i></span>
-                                </button>
-                                <div class="dropdown-menu" [class.active]="classApplied">
-                                    <a href="#" class="dropdown-item d-flex align-items-center">
-                                        <img src="assets/img/flag/germany.jpg" class="shadow-sm" alt="flag">
-                                        <span>Ger</span>
-                                    </a>
-                                    <a href="#" class="dropdown-item d-flex align-items-center">
-                                        <img src="assets/img/flag/france.jpg" class="shadow-sm" alt="flag">
-                                        <span>Fre</span>
-                                    </a>
-                                    <a href="#" class="dropdown-item d-flex align-items-center">
-                                        <img src="assets/img/flag/spain.jpg" class="shadow-sm" alt="flag">
-                                        <span>Spa</span>
-                                    </a>
-                                    <a href="#" class="dropdown-item d-flex align-items-center">
-                                        <img src="assets/img/flag/russia.jpg" class="shadow-sm" alt="flag">
-                                        <span>Rus</span>
-                                    </a>
-                                    <a href="#" class="dropdown-item d-flex align-items-center">
-                                        <img src="assets/img/flag/italy.jpg" class="shadow-sm" alt="flag">
-                                        <span>Ita</span>
-                                    </a>
-                                </div>
-                            </div>
+                            
                         </li>
                         <li><a routerLink="/profile-authentication"><i class='bx bx-log-in'></i> Sign In</a></li>
                         <li><a routerLink="/profile-authentication"><i class='bx bx-user'></i> Sign Up</a></li>
@@ -71,51 +45,40 @@
 
                 <div class="collapse navbar-collapse mean-menu">
                     <ul class="navbar-nav">
-                        <li class="nav-item"><a routerLink="/" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Home</a></li>
-                        
+                        <li class="nav-item"><a routerLink="/" class="nav-link" routerLinkActive="active"
+                                [routerLinkActiveOptions]="{exact: true}">Home</a></li>
+
                         <li class="nav-item"><a href="javascript:void(0)" class="dropdown-toggle nav-link">Shop</a>
                             <ul class="dropdown-menu">
-                                <li class="nav-item"><a routerLink="/shop-full-width-2" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Shop Full Width</a></li>
-                                
-                                <li class="nav-item"><a routerLink="/shop-left-sidebar-2" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Shop Left Sidebar</a></li>
+                                <li class="nav-item"><a routerLink="/shop-full-width-2" class="nav-link"
+                                        routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Medical
+                                        Component</a></li>
 
-                                <li class="nav-item"><a routerLink="/shop-right-sidebar-2" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Shop Right Sidebar</a></li>
-
-                                <li class="nav-item"><a routerLink="/cart" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Cart</a></li>
-
-                                <li class="nav-item"><a routerLink="/checkout" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Checkout</a></li>
-
-                                <li class="nav-item"><a routerLink="/wishlist" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Wishlist</a></li>
-
-                                <li class="nav-item"><a routerLink="/rooms" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Rooms</a></li>
-
-                                <li class="nav-item"><a routerLink="/customer-service" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Customer Service</a></li>
-
-                                <li class="nav-item"><a routerLink="/profile-authentication" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">My Account</a></li>
-
-                                <li class="nav-item"><a routerLink="/order-tracking" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Order Tracking</a></li>
+                                <li class="nav-item"><a routerLink="/shop-full-width-2" class="nav-link"
+                                        routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Water
+                                        Component</a></li>
                             </ul>
                         </li>
 
-                        <li class="nav-item"><a routerLink="/slider-product" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Product</a> </li>
+                        <li class="nav-item"><a routerLink="/about" class="nav-link" routerLinkActive="active"
+                                [routerLinkActiveOptions]="{exact: true}">About Us</a></li>
 
-                        <li class="nav-item"><a routerLink="/shop-left-sidebar-1" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Accessories</a></li>
+                        <li class="nav-item"><a routerLink="/gallery" class="nav-link" routerLinkActive="active"
+                                [routerLinkActiveOptions]="{exact: true}">Gallery</a></li>
 
-                        <li class="nav-item"><a href="javascript:void(0)" class="dropdown-toggle nav-link">Pages</a>
-                            <ul class="dropdown-menu">
-                                <li class="nav-item"><a routerLink="/about" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">About Us</a></li>
+                        <li class="nav-item"><a routerLink="/faq" class="nav-link" routerLinkActive="active"
+                                [routerLinkActiveOptions]="{exact: true}">FAQ</a></li>
 
-                                <li class="nav-item"><a routerLink="/gallery" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Gallery</a></li>
-
-                                <li class="nav-item"><a routerLink="/faq" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">FAQ</a></li>
-
-                                <li class="nav-item"><a routerLink="/error-404" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">404 Error Page</a></li>
-
-                                <li class="nav-item"><a routerLink="/coming-soon" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Coming Soon</a></li>
-                            </ul>
+                        <li class="nav-item"><a routerLink="/wishlist" class="nav-link" routerLinkActive="active"
+                                [routerLinkActiveOptions]="{exact: true}">Wishlist</a>
                         </li>
-                        
-                        <li class="nav-item text-nowrap"><a routerLink="/contact" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}"> Contact Us</a></li>
+
+                        <li class="nav-item"><a routerLink="/profile-authentication" class="nav-link"
+                                routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">My
+                                Account</a></li>
+
+                        <li class="nav-item text-nowrap"><a routerLink="/contact" class="nav-link"
+                                routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"> Contact Us</a></li>
                     </ul>
 
                     <div class="others-option d-flex align-items-center">
@@ -131,7 +94,8 @@
 
                         <div class="option-item">
                             <div class="side-menu-btn">
-                                <i class="bx bx-menu-alt-left" data-bs-toggle="modal" data-bs-target="#sidebarModal"></i>
+                                <i class="bx bx-menu-alt-left" data-bs-toggle="modal"
+                                    data-bs-target="#sidebarModal"></i>
                             </div>
                         </div>
                     </div>
@@ -149,7 +113,7 @@
                     <div class="circle circle-three"></div>
                 </div>
             </div>
-            
+
             <div class="container">
                 <div class="option-inner">
                     <div class="others-option d-flex align-items-center justify-content-center">
@@ -165,7 +129,8 @@
 
                         <div class="option-item">
                             <div class="side-menu-btn">
-                                <i class="bx bx-menu-alt-left" data-bs-toggle="modal" data-bs-target="#sidebarModal"></i>
+                                <i class="bx bx-menu-alt-left" data-bs-toggle="modal"
+                                    data-bs-target="#sidebarModal"></i>
                             </div>
                         </div>
                     </div>
@@ -183,7 +148,7 @@
             <div class="search-overlay-layer"></div>
             <div class="search-overlay-layer"></div>
             <div class="search-overlay-layer"></div>
-            
+
             <div class="search-overlay-close">
                 <span class="search-overlay-close-line"></span>
                 <span class="search-overlay-close-line"></span>

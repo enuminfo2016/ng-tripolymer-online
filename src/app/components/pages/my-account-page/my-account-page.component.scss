@@ -2,13 +2,14 @@
     padding: 40px 50px;
     border-radius: 5px;
     background-color: var(--whiteColor);
-    box-shadow: 0 0 10px rgba(51,51,51,.1);
+    box-shadow: 0 0 10px rgba(51, 51, 51, .1);
     margin-right: 30px;
 
     h2 {
         margin-bottom: 25px;
         font-size: 30px;
     }
+
     form {
         .form-group {
             margin-bottom: 25px;
@@ -20,13 +21,17 @@
                 font-weight: 600;
             }
         }
+
         .remember-me-wrap {
             margin-bottom: 0;
 
-            [type="checkbox"]:checked, [type="checkbox"]:not(:checked) {
+            [type="checkbox"]:checked,
+            [type="checkbox"]:not(:checked) {
                 display: none;
             }
-            [type="checkbox"]:checked + label, [type="checkbox"]:not(:checked) + label {
+
+            [type="checkbox"]:checked+label,
+            [type="checkbox"]:not(:checked)+label {
                 position: relative;
                 padding-left: 28px;
                 cursor: pointer;
@@ -35,7 +40,9 @@
                 margin-bottom: 0;
                 color: var(--optionalColor);
             }
-            [type="checkbox"]:checked + label:before, [type="checkbox"]:not(:checked) + label:before {
+
+            [type="checkbox"]:checked+label:before,
+            [type="checkbox"]:not(:checked)+label:before {
                 content: '';
                 position: absolute;
                 left: 0;
@@ -47,7 +54,9 @@
                 border-radius: 3px;
                 background: #f5f5f5;
             }
-            [type="checkbox"]:checked + label:after, [type="checkbox"]:not(:checked) + label:after {
+
+            [type="checkbox"]:checked+label:after,
+            [type="checkbox"]:not(:checked)+label:after {
                 content: '';
                 width: 8px;
                 height: 8px;
@@ -57,21 +66,26 @@
                 left: 6px;
                 transition: all 0.2s ease;
             }
-            [type="checkbox"]:not(:checked) + label:after {
+
+            [type="checkbox"]:not(:checked)+label:after {
                 opacity: 0;
                 transform: scale(0);
             }
-            [type="checkbox"]:checked + label:after {
+
+            [type="checkbox"]:checked+label:after {
                 opacity: 1;
                 transform: scale(1);
             }
-            [type="checkbox"]:hover + label:before {
+
+            [type="checkbox"]:hover+label:before {
                 border-color: var(--mainColor);
             }
-            [type="checkbox"]:checked + label:before {
+
+            [type="checkbox"]:checked+label:before {
                 border-color: var(--mainColor);
             }
         }
+
         .lost-your-password-wrap {
             text-align: right;
 
@@ -90,6 +104,7 @@
                     transition: var(--transition);
                     background-color: #eeeeee;
                 }
+
                 &::after {
                     width: 0;
                     height: 1px;
@@ -100,16 +115,19 @@
                     content: '';
                     background-color: var(--mainColor);
                 }
+
                 &:hover {
                     &::before {
                         width: 0;
                     }
+
                     &::after {
                         width: 100%;
                     }
                 }
             }
         }
+
         button {
             margin-top: 22px;
             border: none;
@@ -123,6 +141,7 @@
             border-radius: 5px;
             padding: 14.5px 30px;
             font-weight: 700;
+
             &:hover {
                 background-color: var(--blackColor);
                 color: var(--whiteColor);
@@ -130,6 +149,7 @@
         }
     }
 }
+
 .register-form {
     padding-left: 30px;
 
@@ -137,6 +157,7 @@
         margin-bottom: 25px;
         font-size: 30px;
     }
+
     form {
         .form-group {
             margin-bottom: 25px;
@@ -148,13 +169,18 @@
                 font-weight: 600;
             }
         }
+
         .description {
             font-style: italic;
+
             margin: {
                 top: -10px;
                 bottom: 0;
-            };
+            }
+
+            ;
         }
+
         button {
             margin-top: 22px;
             border: none;
@@ -168,6 +194,7 @@
             border-radius: 5px;
             padding: 14.5px 30px;
             font-weight: 700;
+
             &:hover {
                 background-color: var(--blackColor);
                 color: var(--whiteColor);
@@ -188,34 +215,43 @@
             text-align: center;
             font-size: 24px;
         }
+
         form {
             .lost-your-password-wrap {
                 text-align: left;
                 margin-top: 15px;
             }
+
             button {
                 padding: 13px 30px;
                 font-size: 15px;
             }
         }
     }
+
     .register-form {
         margin-top: 40px;
         border-top: 1px solid #eeeeee;
+
         padding: {
             left: 0;
             top: 30px;
-        };
+        }
+
+        ;
+
         h2 {
             margin-bottom: 20px;
             text-align: center;
             font-size: 24px;
         }
+
         form {
             .lost-your-password-wrap {
                 text-align: left;
                 margin-top: 15px;
             }
+
             button {
                 padding: 13px 30px;
                 font-size: 15px;
@@ -226,11 +262,7 @@
 }
 
 /* Min width 576px to Max width 767px */
-@media only screen and (min-width: 576px) and (max-width: 767px) {
-
-    
-
-}
+@media only screen and (min-width: 576px) and (max-width: 767px) {}
 
 /* Min width 768px to Max width 991px */
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -242,13 +274,18 @@
             font-size: 25px;
         }
     }
+
     .register-form {
         margin-top: 40px;
         border-top: 1px solid #eeeeee;
+
         padding: {
             left: 0;
             top: 30px;
-        };
+        }
+
+        ;
+
         h2 {
             font-size: 25px;
         }
@@ -263,6 +300,7 @@
         padding: 35px;
         margin-right: 15px;
     }
+
     .register-form {
         padding-left: 15px;
     }
@@ -270,15 +308,7 @@
 }
 
 /* Min width 1200px to Max width 1355px */
-@media only screen and (min-width: 1200px) and (max-width: 1355px) {
-
-    
-
-}
+@media only screen and (min-width: 1200px) and (max-width: 1355px) {}
 
 /* Min width 1550px */
-@media only screen and (min-width: 1550px) {
-
-
-
-}
+@media only screen and (min-width: 1550px) {}

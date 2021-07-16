@@ -21,48 +21,48 @@ export class TestimonialsComponent implements OnInit {
     ]
     singleTestimonialsItem = [
         {
-            feedback: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.",
+            feedback: "",
             authorImg: 'assets/img/user1.jpg',
-            authorName: 'Jason Doe',
-            authorDesignation: 'Web Developer'
+            authorName: 'Raghu CHOWDAREDDY',
+            authorDesignation: 'CEO'
         },
         {
-            feedback: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.",
+            feedback: "",
             authorImg: 'assets/img/user2.jpg',
-            authorName: 'Sarah Taylor',
-            authorDesignation: 'Web Developer'
+            authorName: 'Siva Kumar AKURATI',
+            authorDesignation: 'CTO'
         }
     ]
 
     testimonialsSlidesOptions: OwlOptions = {
-		loop: true,
-		nav: true,
-		dots: false,
-		autoplayHoverPause: true,
-		animateOut: 'fadeOut',
-		animateIn: 'fadeIn',
-		autoplay: true,
-		navText: [
-			"<i class='bx bx-left-arrow-alt'></i>",
-			"<i class='bx bx-right-arrow-alt'></i>"
-		],
-		responsive: {
-			0: {
+        loop: true,
+        nav: true,
+        dots: false,
+        autoplayHoverPause: true,
+        animateOut: 'fadeOut',
+        animateIn: 'fadeIn',
+        autoplay: true,
+        navText: [
+            "<i class='bx bx-left-arrow-alt'></i>",
+            "<i class='bx bx-right-arrow-alt'></i>"
+        ],
+        responsive: {
+            0: {
                 items: 1
-			},
-			576: {
+            },
+            576: {
                 items: 1
-			},
-			768: {
+            },
+            768: {
                 items: 1
-			},
-			992: {
+            },
+            992: {
                 items: 1
-			},
-			1200: {
+            },
+            1200: {
                 items: 1
-			}
-		}
+            }
+        }
     }
 
 }

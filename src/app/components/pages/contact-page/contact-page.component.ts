@@ -19,16 +19,16 @@ export class ContactPageComponent implements OnInit {
         }
     ]
 
-    submit(form){
+    submit(form) {
         var name = form.name;
         console.log(name);
-        
+
         var email = form.email;
         console.log(email);
 
         var number = form.number;
         console.log(number);
-        
+
         var message = form.message;
         console.log(message);
     }
