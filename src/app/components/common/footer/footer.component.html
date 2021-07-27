@@ -37,8 +37,7 @@
                     <h3>Store</h3>
 
                     <ul class="links-list">
-                        <li><a routerLink="/shop-full-width-2">Medical</a></li>
-                        <li><a routerLink="/shop-full-width-2">Water</a></li>
+                        <li *ngFor="let category of categories"><a routerLink="/shop-full-width-2"> {{category.name}} </a></li>
                     </ul>
                 </div>
             </div>

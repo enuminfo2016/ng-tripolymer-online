@@ -3,7 +3,8 @@ import { NgModule } from '@angular/core';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgxScrollTopModule } from 'ngx-scrolltop';
-import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { SelectDropDownModule } from 'ngx-select-dropdown';
 
@@ -43,6 +44,9 @@ import { VideoComponent } from './components/common/video/video.component';
 import { WhyChooseUsComponent } from './components/common/why-choose-us/why-choose-us.component';
 import { RoomsPageComponent } from './components/pages/rooms-page/rooms-page.component';
 import { ShopFullWidthPageTwoComponent } from './components/pages/shop-full-width-page-two/shop-full-width-page-two.component';
+import { AuthGuard } from './services/auth.guard';
+import { AuthenticationService } from './services/authentication.service';
+import { AdminService } from './services/admin.service';
 
 const routes: Routes = [
   { path: '', component: HomeDemoTwoComponent },
@@ -52,11 +56,11 @@ const routes: Routes = [
   { path: 'rooms', component: RoomsPageComponent },
   { path: 'customer-service', component: CustomerServicePageComponent },
   { path: 'profile-authentication', component: MyAccountPageComponent },
-  { path: 'order-tracking', component: OrderTrackingPageComponent },
+  { path: 'order-tracking', component: OrderTrackingPageComponent, canActivate: [AuthGuard] },
   { path: 'gallery', component: GalleryPageComponent },
   { path: 'cart', component: CartPageComponent },
-  { path: 'checkout', component: CheckoutPageComponent },
-  { path: 'wishlist', component: WishlistPageComponent },
+  { path: 'checkout', component: CheckoutPageComponent, canActivate: [AuthGuard] },
+  { path: 'wishlist', component: WishlistPageComponent, canActivate: [AuthGuard] },
   { path: 'faq', component: FaqPageComponent },
   { path: 'coming-soon', component: ComingSoonPageComponent },
   { path: 'contact', component: ContactPageComponent },
@@ -106,11 +110,16 @@ const routes: Routes = [
     BrowserAnimationsModule,
     CarouselModule,
     NgxScrollTopModule,
-    FormsModule,
+    HttpClientModule,
+    ReactiveFormsModule,
     NgxPaginationModule,
     SelectDropDownModule
   ],
-  providers: [],
+  providers: [
+    AuthGuard,
+    AuthenticationService,
+    AdminService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
