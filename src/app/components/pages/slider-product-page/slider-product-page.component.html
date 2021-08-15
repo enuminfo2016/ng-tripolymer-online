@@ -38,22 +38,22 @@
             </owl-carousel-o>
         </div>
         <div class="products-details-desc">
-            <h3>Ergonomic Desk Sofa</h3>
+            <h3>{{singleProductsItem.title}}</h3>
             <div class="price">
-                <span class="new-price">$200</span>
-                <span class="old-price">$210</span>
+                <span class="new-price">${{singleProductsItem.oldPrice}}</span>
+                <span class="old-price">${{singleProductsItem.newPrice}}</span>
             </div>
-            <p>Santiago who travels from his homeland in Spain to the Egyptian desert in search of a treasure buried near the Pyramids. Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor incididunt ut labore et. Lorem ipsum dolor sit amet, consectetur adipiscing elitet.</p>
+            <p>{{singleProductsItem.description}}</p>
             <div class="products-meta">
-                <span>SKU: <span class="sku">10</span></span>
+                <span>SKU: <span class="sku">{{singleProductsItem.detailsLink}}</span></span>
                 <span>Availability: <span class="in-stock">In Stock</span></span>
-                <span>Categories: <a routerLink="/">Chair</a></span>
-                <span>Tag: <a routerLink="/">Chair</a></span>
+                <span>Categories: <a routerLink="/">{{singleProductsItem.category}}</a></span>
+                <span>Tag: <a routerLink="/">{{singleProductsItem.category}}</a></span>
             </div>
             <div class="products-add-to-cart">
                 <div class="input-counter">
                     <span class="minus-btn"><i class='bx bx-minus'></i></span>
-                    <input type="text" max="10" min="1" value="1">
+                    <input type="text" max="100" min="1" value="{{singleProductsItem.quantity}}">
                     <span class="plus-btn"><i class='bx bx-plus'></i></span>
                 </div>
                 <button type="submit" class="default-btn"><i class='bx bxs-cart-add'></i> ADD TO CART</button>
@@ -82,8 +82,10 @@
                 </li>
             </ul>
             <div class="tab-content" id="myTabContent">
+            
+            	<!-- Descripton -->
                 <div class="tab-pane fade show active" id="description" role="tabpanel">
-                    <p>This story, dazzling in its powerful simplicity and soul-stirring wisdom, is about an Andalusian shepherd boy named Santiago who travels from his homeland in Spain to the Egyptian desert in search of a treasure buried near the Pyramids. Lorem ipsum dolor sit.</p>
+                    <p>{{singleProductsItem.description}}</p>
                     <ul>
                         <li>Instant <strong>tripolymer</strong> bestseller</li>
                         <li>Translated into 18 languages</li>
@@ -93,6 +95,8 @@
                         <li>An Amazon, Bloomberg, Financial Times, Forbes, Inc., Newsweek, Strategy + Business, Tech Crunch, Washington Post Best Business Book of the year</li>
                     </ul>
                 </div>
+                
+                <!-- Additional Information -->
                 <div class="tab-pane fade" id="additional-information" role="tabpanel">
                     <div class="table-responsive">
                         <table class="table table-striped">
@@ -121,6 +125,8 @@
                         </table>
                     </div>
                 </div>
+                
+                <!-- Review -->
                 <div class="tab-pane fade" id="reviews" role="tabpanel">
                     <div class="products-review-comments">
                         <div class="user-review">

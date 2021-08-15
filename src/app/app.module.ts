@@ -35,6 +35,7 @@ import { TrendingProductsComponent } from './components/common/trending-products
 import { PopularProductsComponent } from './components/common/popular-products/popular-products.component';
 import { NewProductsComponent } from './components/common/new-products/new-products.component';
 import { DiscountComponent } from './components/common/discount/discount.component';
+import { StickyProductPageComponent } from './components/pages/sticky-product-page/sticky-product-page.component';
 import { SliderProductPageComponent } from './components/pages/slider-product-page/slider-product-page.component';
 import { CartPageComponent } from './components/pages/cart-page/cart-page.component';
 import { CheckoutPageComponent } from './components/pages/checkout-page/checkout-page.component';
@@ -50,78 +51,80 @@ import { AdminService } from './services/admin.service';
 import { OnlineService } from './services/online.service';
 
 const routes: Routes = [
-  { path: '', component: HomeDemoTwoComponent },
-  { path: 'about', component: AboutPageComponent },
-  { path: 'shop-full-width-2/:id', component: ShopFullWidthPageTwoComponent },
-  { path: 'slider-product', component: SliderProductPageComponent },
-  { path: 'rooms', component: RoomsPageComponent },
-  { path: 'customer-service', component: CustomerServicePageComponent },
-  { path: 'profile-authentication', component: MyAccountPageComponent },
-  { path: 'order-tracking', component: OrderTrackingPageComponent, canActivate: [AuthGuard] },
-  { path: 'gallery', component: GalleryPageComponent },
-  { path: 'cart', component: CartPageComponent },
-  { path: 'checkout', component: CheckoutPageComponent, canActivate: [AuthGuard] },
-  { path: 'wishlist', component: WishlistPageComponent, canActivate: [AuthGuard] },
-  { path: 'faq', component: FaqPageComponent },
-  { path: 'coming-soon', component: ComingSoonPageComponent },
-  { path: 'contact', component: ContactPageComponent },
-  { path: '**', component: NotFoundPageComponent }
+	{ path: '', component: HomeDemoTwoComponent },
+	{ path: 'about', component: AboutPageComponent },
+	{ path: 'shop-full-width-2/:id', component: ShopFullWidthPageTwoComponent },
+	{ path: 'sticky-product/:id', component: StickyProductPageComponent },
+	{ path: 'slider-product/:id', component: SliderProductPageComponent },
+	{ path: 'rooms', component: RoomsPageComponent },
+	{ path: 'customer-service', component: CustomerServicePageComponent },
+	{ path: 'profile-authentication', component: MyAccountPageComponent },
+	{ path: 'order-tracking', component: OrderTrackingPageComponent, canActivate: [AuthGuard] },
+	{ path: 'gallery', component: GalleryPageComponent },
+	{ path: 'cart', component: CartPageComponent },
+	{ path: 'checkout', component: CheckoutPageComponent, canActivate: [AuthGuard] },
+	{ path: 'wishlist', component: WishlistPageComponent, canActivate: [AuthGuard] },
+	{ path: 'faq', component: FaqPageComponent },
+	{ path: 'coming-soon', component: ComingSoonPageComponent },
+	{ path: 'contact', component: ContactPageComponent },
+	{ path: '**', component: NotFoundPageComponent }
 ];
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    GalleryPageComponent,
-    ContactPageComponent,
-    HomeDemoTwoComponent,
-    NavbarStyleOneComponent,
-    NavbarStyleTwoComponent,
-    PartnerComponent,
-    TestimonialsComponent,
-    HomeoneCategoriesComponent,
-    FacilityStyleOneComponent,
-    DealInThisWeekComponent,
-    FacilityStyleTwoComponent,
-    SubscribeComponent,
-    HometwoBannerComponent,
-    FooterComponent,
-    NotFoundPageComponent,
-    ComingSoonPageComponent,
-    FaqPageComponent,
-    OrderTrackingPageComponent,
-    MyAccountPageComponent,
-    CustomerServicePageComponent,
-    UpcomingProductsComponent,
-    TrendingProductsComponent,
-    PopularProductsComponent,
-    NewProductsComponent,
-    DiscountComponent,
-    SliderProductPageComponent,
-    CartPageComponent,
-    CheckoutPageComponent,
-    WishlistPageComponent,
-    AboutPageComponent,
-    VideoComponent,
-    WhyChooseUsComponent,
-    ShopFullWidthPageTwoComponent
-  ],
-  imports: [
-    BrowserModule,
-    RouterModule.forRoot(routes, { relativeLinkResolution: 'legacy' }),
-    BrowserAnimationsModule,
-    CarouselModule,
-    NgxScrollTopModule,
-    HttpClientModule,
-    ReactiveFormsModule,
-    NgxPaginationModule,
-    SelectDropDownModule
-  ],
-  providers: [
-    AuthGuard,
-    AuthenticationService,
-    AdminService,
-	OnlineService
-  ],
-  bootstrap: [AppComponent]
+	declarations: [
+		AppComponent,
+		GalleryPageComponent,
+		ContactPageComponent,
+		HomeDemoTwoComponent,
+		NavbarStyleOneComponent,
+		NavbarStyleTwoComponent,
+		PartnerComponent,
+		TestimonialsComponent,
+		HomeoneCategoriesComponent,
+		FacilityStyleOneComponent,
+		DealInThisWeekComponent,
+		FacilityStyleTwoComponent,
+		SubscribeComponent,
+		HometwoBannerComponent,
+		FooterComponent,
+		NotFoundPageComponent,
+		ComingSoonPageComponent,
+		FaqPageComponent,
+		OrderTrackingPageComponent,
+		MyAccountPageComponent,
+		CustomerServicePageComponent,
+		UpcomingProductsComponent,
+		TrendingProductsComponent,
+		PopularProductsComponent,
+		NewProductsComponent,
+		DiscountComponent,
+		StickyProductPageComponent,
+		CartPageComponent,
+		CheckoutPageComponent,
+		WishlistPageComponent,
+		AboutPageComponent,
+		VideoComponent,
+		WhyChooseUsComponent,
+		ShopFullWidthPageTwoComponent,
+		SliderProductPageComponent
+	],
+	imports: [
+		BrowserModule,
+		RouterModule.forRoot(routes, { relativeLinkResolution: 'legacy' }),
+		BrowserAnimationsModule,
+		CarouselModule,
+		NgxScrollTopModule,
+		HttpClientModule,
+		ReactiveFormsModule,
+		NgxPaginationModule,
+		SelectDropDownModule
+	],
+	providers: [
+		AuthGuard,
+		AuthenticationService,
+		AdminService,
+		OnlineService
+	],
+	bootstrap: [AppComponent]
 })
 export class AppModule { }

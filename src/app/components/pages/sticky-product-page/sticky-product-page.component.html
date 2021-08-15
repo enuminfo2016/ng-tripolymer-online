@@ -1,4 +1,4 @@
-<app-navbar-style-one></app-navbar-style-one>
+<app-navbar-style-two></app-navbar-style-two>
 
 <!-- Start Page Title Area -->
 <div class="page-title-area" *ngFor="let Content of pageTitle;" style="background-image: url({{Content.bgImage}});">
@@ -44,17 +44,17 @@
             </div>
             <div class="col-lg-7 col-md-12">
                 <div class="products-details-desc products-details-desc-sticky">
-                    <h3>Ergonomic Desk Sofa</h3>
+                    <h3>{{singleProductsItem.title}}</h3>
                     <div class="price">
-                        <span class="new-price">$200</span>
-                        <span class="old-price">$210</span>
+                        <span class="new-price">${{singleProductsItem.oldPrice}}</span>
+                        <span class="old-price">${{singleProductsItem.newPrice}}</span>
                     </div>
-                    <p>Santiago who travels from his homeland in Spain to the Egyptian desert in search of a treasure buried near the Pyramids. Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor incididunt ut labore et. Lorem ipsum dolor sit amet, consectetur adipiscing elitet.</p>
+                    <p>{{singleProductsItem.description}}</p>
                     <div class="products-meta">
                         <span>SKU: <span class="sku">10</span></span>
                         <span>Availability: <span class="in-stock">In Stock</span></span>
-                        <span>Categories: <a href="#">Chair</a></span>
-                        <span>Tag: <a href="#">Chair</a></span>
+                        <span>Categories: <a href="#">{{singleProductsItem.category}}</a></span>
+                        <span>Tag: <a href="#">{{singleProductsItem.category}}</a></span>
                     </div>
                     <div class="products-add-to-cart">
                         <div class="input-counter">
@@ -87,6 +87,8 @@
                             </li>
                         </ul>
                         <div class="tab-content" id="myTabContent">
+                        
+                        	<!-- description -->
                             <div class="tab-pane fade" id="description" role="tabpanel">
                                 <p>This story, dazzling in its powerful simplicity and soul-stirring wisdom, is about an Andalusian shepherd boy named Santiago who travels from his homeland in Spain to the Egyptian desert in search of a treasure buried near the Pyramids. Lorem ipsum dolor sit.</p>
                                 <ul>
@@ -98,6 +100,8 @@
                                     <li>An Amazon, Bloomberg, Financial Times, Forbes, Inc., Newsweek, Strategy + Business, Tech Crunch, Washington Post Best Business Book of the year</li>
                                 </ul>
                             </div>
+                            
+                            <!-- additional information -->
                             <div class="tab-pane fade" id="additional-information" role="tabpanel">
                                 <div class="table-responsive">
                                     <table class="table table-striped">
@@ -126,6 +130,8 @@
                                     </table>
                                 </div>
                             </div>
+                            
+                            <!-- reviews -->
                             <div class="tab-pane fade show active" id="reviews" role="tabpanel">
                                 <div class="products-review-comments">
                                     <div class="user-review">
