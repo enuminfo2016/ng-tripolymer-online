@@ -50,7 +50,7 @@
 
                         <li class="nav-item"><a href="javascript:void(0)" class="dropdown-toggle nav-link">Shop</a>
                             <ul class="dropdown-menu">
-                                <li class="nav-item" *ngFor="let category of categories"><a routerLink="/shop-full-width-2" class="nav-link"
+                                <li class="nav-item" *ngFor="let category of categories"><a routerLink="/shop-full-width-2/{{category.id}}" class="nav-link"
                                         routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"> {{category.name}} </a></li>
                             </ul>
                         </li>

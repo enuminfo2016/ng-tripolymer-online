@@ -47,11 +47,12 @@ import { ShopFullWidthPageTwoComponent } from './components/pages/shop-full-widt
 import { AuthGuard } from './services/auth.guard';
 import { AuthenticationService } from './services/authentication.service';
 import { AdminService } from './services/admin.service';
+import { OnlineService } from './services/online.service';
 
 const routes: Routes = [
   { path: '', component: HomeDemoTwoComponent },
   { path: 'about', component: AboutPageComponent },
-  { path: 'shop-full-width-2', component: ShopFullWidthPageTwoComponent },
+  { path: 'shop-full-width-2/:id', component: ShopFullWidthPageTwoComponent },
   { path: 'slider-product', component: SliderProductPageComponent },
   { path: 'rooms', component: RoomsPageComponent },
   { path: 'customer-service', component: CustomerServicePageComponent },
@@ -118,7 +119,8 @@ const routes: Routes = [
   providers: [
     AuthGuard,
     AuthenticationService,
-    AdminService
+    AdminService,
+	OnlineService
   ],
   bootstrap: [AppComponent]
 })

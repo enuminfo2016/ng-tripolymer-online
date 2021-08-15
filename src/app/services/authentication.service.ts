@@ -27,7 +27,7 @@ export class AuthenticationService {
   // tslint:disable-next-line: typedef
   public login(username: string, password: string) {
     // tslint:disable-next-line: object-literal-key-quotes
-    return this.http.post<User>('', { 'username': username, 'password': password })
+    return this.http.post<User>('http://localhost:8081/api/security/user/authentication', { 'username': username, 'password': password })
       .pipe(map(user => {
         if (user && user.loggedIn) {
           localStorage.setItem('loggedUser', JSON.stringify(user));
