@@ -34,7 +34,7 @@
                             <li><a href="{{Content.mainImg}}" class="popup-btn"><i class='bx bx-scan'></i></a></li>
                             <li><a routerLink="/slider-product/{{Content.detailsLink}}"><i class='bx bx-link'></i></a></li>
                         </ul>
-                        <a routerLink="/cart" class="add-to-cart-btn"><i class="bx bx-cart"></i> Add To Cart</a>
+                        <a href="" (click)="addToCart(Content)" class="add-to-cart-btn"><i class="bx bx-cart"></i> Add To Cart</a>
                     </div>
                     <div class="products-content">
                         <h3><a routerLink="/slider-product/{{Content.detailsLink}}">{{Content.title}}</a></h3>

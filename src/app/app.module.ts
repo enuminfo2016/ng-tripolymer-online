@@ -49,6 +49,7 @@ import { AuthGuard } from './services/auth.guard';
 import { AuthenticationService } from './services/authentication.service';
 import { AdminService } from './services/admin.service';
 import { OnlineService } from './services/online.service';
+import { CartService } from './services/cart.service';
 
 const routes: Routes = [
 	{ path: '', component: HomeDemoTwoComponent },
@@ -123,7 +124,8 @@ const routes: Routes = [
 		AuthGuard,
 		AuthenticationService,
 		AdminService,
-		OnlineService
+		OnlineService,
+		CartService
 	],
 	bootstrap: [AppComponent]
 })

@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router'
+import { ActivatedRoute } from '@angular/router';
 import { Product } from '../../../models/product';
 import { OnlineService } from '../../../services/online.service';
+import { CartService } from 'src/app/services/cart.service';
 
 @Component({
 	selector: 'app-shop-full-width-page-two',
@@ -12,7 +13,8 @@ export class ShopFullWidthPageTwoComponent implements OnInit {
 	singleProductsItem: Product[] = [];
 
 	constructor(private route: ActivatedRoute,
-		private onlineService: OnlineService) { }
+		private onlineService: OnlineService,
+		private cartService: CartService) { }
 
 	ngOnInit(): void {
 		this.resetOption = [this.options[0]];
@@ -86,4 +88,5 @@ export class ShopFullWidthPageTwoComponent implements OnInit {
 		this.resetOption = [];
 	}
 
+	addToCart(item: Product): void { item.quantity = 1; this.cartService.addItems(item); }
 }
