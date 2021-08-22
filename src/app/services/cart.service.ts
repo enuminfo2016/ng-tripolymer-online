@@ -1,48 +1,45 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
 import { Product } from '../models/product';
 
 @Injectable({
-  providedIn: 'root'
+	providedIn: 'root'
 })
 export class CartService {
 
-  constructor(private http: HttpClient) { }
+	constructor() { }
 
-  addItems(item: Product): void {
-    let itemsInCart = [];
-    if (localStorage.getItem('cartProducts') == null) {
-      itemsInCart.push(item);
-    } else {
-      itemsInCart = JSON.parse(localStorage.getItem('cartProducts'));
-      for (var i in itemsInCart) {
-        if (item.id == itemsInCart[i].id) {
-          itemsInCart[i].quantity = itemsInCart[i].quantity + item.quantity;
-        }
-        itemsInCart.push(item);
-      }
-    }
-    console.log("addItems => " + JSON.stringify(itemsInCart));
-    localStorage.setItem('cartProducts', JSON.stringify(itemsInCart));
-  }
+	addItems(item: Product): void {
+		this.removeItem(item);
+		const products: Product[] = JSON.parse(localStorage.getItem("cart_item")) || [];
+		for (let i = 0; i < products.length; i++) {
+			if (products[i].id === item.id) {
+				products[i].newPrice = products[i].newPrice + item.newPrice;
+				products[i].oldPrice = products[i].oldPrice + item.oldPrice;
+				break;
+			}
+		}
+		products.push(item);
+		setTimeout(() => {
+			localStorage.setItem("cart_item", JSON.stringify(products));
+		}, 500);
+	}
 
-  getItems(): Product[] {
-    let itemsInCart = JSON.parse(localStorage.getItem('cartProducts'));
-    console.log("getItems => " + itemsInCart);
-    return itemsInCart;
-  }
+	getItems(): Product[] {
+		const products: Product[] =
+			JSON.parse(localStorage.getItem("cart_item")) || [];
+		return products;
+	}
 
-  deleteItem(item): void {
-    let itemsInCart = [];
-    let index;
-    itemsInCart = JSON.parse(localStorage.getItem('cartProducts'));
-    for (let i in itemsInCart) {
-      if (item.id == itemsInCart[i].id) {
-        index = i;
-      }
-    }
-    itemsInCart.splice(index, 1);
-    console.log("deleteItem => " + itemsInCart);
-    localStorage.setItem('cartProducts', JSON.stringify(itemsInCart));
-  }
+	removeItem(item: Product): void {
+		const products: Product[] = JSON.parse(localStorage.getItem("cart_item"));
+		for (let i = 0; i < products.length; i++) {
+			if (products[i].id === item.id) {
+				products.splice(i, 1);
+				break;
+			}
+		}
+		setTimeout(() => {
+			localStorage.setItem("cart_item", JSON.stringify(products));
+		}, 500);
+	}
 }

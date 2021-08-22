@@ -16,6 +16,7 @@ export class StickyProductPageComponent implements OnInit {
 		private onlineService: OnlineService) {
 		this.onlineService.productDetailByProduct(this.route.snapshot.paramMap.get('id')).subscribe(response => {
 			this.singleProductsItem = response;
+			console.log(JSON.stringify(this.singleProductsItem));
 			this.pageTitle = [
 				{
 					bgImage: 'assets/img/page-title-bg.jpg',

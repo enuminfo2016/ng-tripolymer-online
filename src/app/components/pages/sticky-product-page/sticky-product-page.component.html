@@ -15,30 +15,9 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-5 col-md-12">
-                <div class="products-details-image">
-                    <a href="assets/img/products/products4.jpg" class="popup-btn">
-                        <img src="assets/img/products/products4.jpg" alt="image">
-                    </a>
-                    <a href="assets/img/products/products5.jpg" class="popup-btn">
-                        <img src="assets/img/products/products5.jpg" alt="image">
-                    </a>
-                    <a href="assets/img/products/products6.jpg" class="popup-btn">
-                        <img src="assets/img/products/products6.jpg" alt="image">
-                    </a>
-                    <a href="assets/img/products/products7.jpg" class="popup-btn">
-                        <img src="assets/img/products/products7.jpg" alt="image">
-                    </a>
-                    <a href="assets/img/products/products8.jpg" class="popup-btn">
-                        <img src="assets/img/products/products8.jpg" alt="image">
-                    </a>
-                    <a href="assets/img/products/products9.jpg" class="popup-btn">
-                        <img src="assets/img/products/products9.jpg" alt="image">
-                    </a>
-                    <a href="assets/img/products/products10.jpg" class="popup-btn">
-                        <img src="assets/img/products/products10.jpg" alt="image">
-                    </a>
-                    <a href="assets/img/products/products11.jpg" class="popup-btn">
-                        <img src="assets/img/products/products11.jpg" alt="image">
+                <div class="products-details-image" *ngFor="let Content of singleProductsItem.images">
+                    <a href="{{Content}}" class="popup-btn">
+                        <img src="{{Content}}" alt="image">
                     </a>
                 </div>
             </div>

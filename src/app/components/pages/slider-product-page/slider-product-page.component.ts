@@ -25,7 +25,6 @@ export class SliderProductPageComponent implements OnInit {
 				}
 			]
 			let responseImages: string[] = this.singleProductsItem.images;
-			console.log(JSON.stringify(responseImages));
 			this.productsDetailsImageSlidesOptions = {
 				loop: true,
 				nav: true,
