@@ -11,6 +11,7 @@ export class CartService {
 
   addItems(item: Product): void {
     let itemsInCart = [];
+    let canItemAdd = true;
     if (localStorage.getItem('cartProducts') == null) {
       itemsInCart.push(item);
     } else {
@@ -18,16 +19,21 @@ export class CartService {
       for (var i in itemsInCart) {
         if (item.id == itemsInCart[i].id) {
           itemsInCart[i].quantity = itemsInCart[i].quantity + item.quantity;
+          canItemAdd = false;
+		  break;
         }
-        itemsInCart.push(item);
       }
+      if(canItemAdd){
+	    itemsInCart.push(item);
+	  }
     }
     console.log("addItems => " + JSON.stringify(itemsInCart));
     localStorage.setItem('cartProducts', JSON.stringify(itemsInCart));
   }
 
   getItems(): Product[] {
-    let itemsInCart = JSON.parse(localStorage.getItem('cartProducts'));
+	//localStorage.clear();
+	let itemsInCart = JSON.parse(localStorage.getItem('cartProducts'));
     console.log("getItems => " + itemsInCart);
     return itemsInCart;
   }
