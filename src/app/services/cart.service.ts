@@ -22,13 +22,13 @@ export class CartService {
         itemsInCart.push(item);
       }
     }
-    // console.log("addItems => " + JSON.stringify(itemsInCart));
+    console.log("addItems => " + JSON.stringify(itemsInCart));
     localStorage.setItem('cartProducts', JSON.stringify(itemsInCart));
   }
 
   getItems(): Product[] {
     let itemsInCart = JSON.parse(localStorage.getItem('cartProducts'));
-    // console.log("getItems => " + itemsInCart);
+    console.log("getItems => " + itemsInCart);
     return itemsInCart;
   }
 
@@ -42,7 +42,7 @@ export class CartService {
       }
     }
     itemsInCart.splice(index, 1);
-    // console.log("deleteItem => " + itemsInCart);
-    // localStorage.setItem('cartProducts', JSON.stringify(itemsInCart));
+    console.log("deleteItem => " + itemsInCart);
+    localStorage.setItem('cartProducts', JSON.stringify(itemsInCart));
   }
 }

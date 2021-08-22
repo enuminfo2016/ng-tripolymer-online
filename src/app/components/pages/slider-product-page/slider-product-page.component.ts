@@ -12,6 +12,7 @@ import { OnlineService } from '../../../services/online.service';
 export class SliderProductPageComponent implements OnInit {
 	pageTitle = [];
 	singleProductsItem: Product = new Product();
+	productsDetailsImageSlidesOptions: OwlOptions = {};
 
 	constructor(private route: ActivatedRoute,
 		private onlineService: OnlineService) {
@@ -23,13 +24,32 @@ export class SliderProductPageComponent implements OnInit {
 					title: this.singleProductsItem.title
 				}
 			]
+			let responseImages: string[] = this.singleProductsItem.images;
+			console.log(JSON.stringify(responseImages));
+			this.productsDetailsImageSlidesOptions = {
+				loop: true,
+				nav: true,
+				dots: false,
+				autoplayHoverPause: true,
+				autoplay: true,
+				margin: 30,
+				navText: [
+					"<i class='bx bx-left-arrow-alt'></i>",
+					"<i class='bx bx-right-arrow-alt'></i>"
+				],
+				responsive: {
+					0: {
+						items: responseImages.length,
+					}
+				}
+			};
 		});
 	}
 
 	ngOnInit(): void {
 	}
 
-	productsDetailsImageSlidesOptions: OwlOptions = {
+	/* productsDetailsImageSlidesOptions: OwlOptions = {
 		loop: true,
 		nav: true,
 		dots: false,
@@ -54,6 +74,6 @@ export class SliderProductPageComponent implements OnInit {
 				items: 3,
 			}
 		}
-	}
+	} */
 
 }

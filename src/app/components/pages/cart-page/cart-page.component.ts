@@ -8,6 +8,7 @@ import { CartService } from '../../../../app/services/cart.service';
     styleUrls: ['./cart-page.component.scss']
 })
 export class CartPageComponent implements OnInit {
+	value: number;
     cartProducts: Product[] = [];
 
     constructor(private cartService: CartService) { }
@@ -25,7 +26,7 @@ export class CartPageComponent implements OnInit {
 
     removeFromCart(item: Product): void { this.cartService.deleteItem(item); }
 
-    quantityChange(qty: number, item: Product): void { item.quantity = item.quantity + qty; this.cartService.addItems(item); }
+    quantityChange(qty: string, item: Product): void { item.quantity = parseInt(qty); this.cartService.addItems(item); }
 
     qtyMinus(item: Product): void { item.quantity = item.quantity - 1; this.cartService.addItems(item); }
 

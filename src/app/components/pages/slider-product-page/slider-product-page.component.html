@@ -14,25 +14,10 @@
 <section class="products-details-area ptb-100">
     <div class="container">
         <div class="products-details-image-slides">
-            <owl-carousel-o [options]="productsDetailsImageSlidesOptions">
+            <owl-carousel-o [options]="productsDetailsImageSlidesOptions" *ngFor="let Content of singleProductsItem.images">
                 <ng-template carouselSlide>
                     <div class="image">
-                        <img src="assets/img/products/products4.jpg" alt="image">
-                    </div>
-                </ng-template>
-                <ng-template carouselSlide>
-                    <div class="image">
-                        <img src="assets/img/products/products5.jpg" alt="image">
-                    </div>
-                </ng-template>
-                <ng-template carouselSlide>
-                    <div class="image">
-                        <img src="assets/img/products/products6.jpg" alt="image">
-                    </div>
-                </ng-template>
-                <ng-template carouselSlide>
-                    <div class="image">
-                        <img src="assets/img/products/products7.jpg" alt="image">
+                        <img src="{{Content}}" alt="image1">
                     </div>
                 </ng-template>
             </owl-carousel-o>
