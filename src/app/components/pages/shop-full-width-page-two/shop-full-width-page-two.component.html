@@ -25,19 +25,19 @@
                 *ngFor="let Content of singleProductsItem | paginate: { itemsPerPage: 9, currentPage: shopFullWidth }">
                 <div class="single-products-item">
                     <div class="products-image">
-                        <a routerLink="/slider-product/{{Content.detailsLink}}" class="d-block">
+                        <a routerLink="/sticky-product/{{Content.detailsLink}}" class="d-block">
                             <img [src]="Content.mainImg" alt="image">
                         </a>
                         <ul class="products-button">
                             <li><a href="#" data-bs-toggle="modal" data-bs-target="#productsQuickView"><i
                                         class='bx bx-show-alt'></i></a></li>
                             <li><a href="{{Content.mainImg}}" class="popup-btn"><i class='bx bx-scan'></i></a></li>
-                            <li><a routerLink="/slider-product/{{Content.detailsLink}}"><i class='bx bx-link'></i></a></li>
+                            <li><a routerLink="/sticky-product/{{Content.detailsLink}}"><i class='bx bx-link'></i></a></li>
                         </ul>
-                        <a href="" (click)="addToCart(Content)" class="add-to-cart-btn"><i class="bx bx-cart"></i> Add To Cart</a>
+                        <a style="cursor: pointer;" (click)="addToCart(Content)" class="add-to-cart-btn"><i class="bx bx-cart"></i> Add To Cart</a>
                     </div>
                     <div class="products-content">
-                        <h3><a routerLink="/slider-product/{{Content.detailsLink}}">{{Content.title}}</a></h3>
+                        <h3><a routerLink="/sticky-product/{{Content.detailsLink}}">{{Content.title}}</a></h3>
                         <div class="price">
                             <span class="new-price">{{Content.newPrice}}</span>
                             <span class="old-price" *ngIf="Content.oldPrice">{{Content.oldPrice}}</span>

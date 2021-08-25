@@ -11,4 +11,6 @@ export class Product {
 	mainImg!: string;
 	detailsLink!: string;
 	quantity!: number;
+	remove!: boolean;
+	uuid!: number;
 }
