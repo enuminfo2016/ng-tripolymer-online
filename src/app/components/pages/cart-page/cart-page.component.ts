@@ -18,7 +18,7 @@ export class CartPageComponent implements OnInit {
 	constructor(private cartService: CartService) { }
 
 	ngOnInit(): void {
-		this.getCartProducts();
+		this.refreshCartProducts();
 	}
 
 	pageTitle = [
@@ -28,8 +28,8 @@ export class CartPageComponent implements OnInit {
 		}
 	]
 
-	getCartProducts(): void {
-		this.cartProducts = this.cartService.getItems();
+	refreshCartProducts(): void {
+		this.cartProducts = this.cartService.getAllItems();
 		this.subTotal = 0;
 		this.shipValue = 0;
 		this.taxValue = 0;
@@ -43,25 +43,23 @@ export class CartPageComponent implements OnInit {
 	}
 
 	removeFromCart(item: Product): void {
-		this.cartService.removeItem(item);
-		this.getCartProducts();
+		this.cartService.deleteItem(item);
+		this.refreshCartProducts();
 	}
 
-	quantityChange(qty: string, item: Product): void {
+	/*quantityChange(qty: string, item: Product): void {
 		item.quantity = parseInt(qty);
-		this.cartService.addItems(item);
+		// this.cartService.addItems(item);
 		this.getCartProducts();
-	}
+	}*/
 
 	qtyMinus(item: Product): void {
-		//item.quantity = item.quantity - 1;
-		this.cartService.qtyMinus(item);
-		this.getCartProducts();
+		this.cartService.saveItem(item, 'minus', 1);
+		this.refreshCartProducts();
 	}
 
 	qtyPlus(item: Product): void {
-		item.quantity = item.quantity + 1;
-		this.cartService.addItems(item);
-		this.getCartProducts();
+		this.cartService.saveItem(item, 'plus', 1);
+		this.refreshCartProducts();
 	}
 }

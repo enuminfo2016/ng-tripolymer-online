@@ -88,5 +88,5 @@ export class ShopFullWidthPageTwoComponent implements OnInit {
 		this.resetOption = [];
 	}
 
-	addToCart(item: Product): void { item.quantity = 1; this.cartService.addItems(item); }
+	addToCart(item: Product): void { this.cartService.saveItem(item, 'init', 1); }
 }

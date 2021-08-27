@@ -136,43 +136,29 @@
 						<div class="order-table table-responsive">
 							<table class="table table-bordered">
 								<tbody>
-									<tr>
+									<tr *ngFor="let Content of cartProducts">
 										<td class="product-name"><a routerLink="/simple-product">
-												Ergonomic Desk Sofa</a></td>
-										<td class="product-total"><span class="subtotal-amount">$150.00</span>
-										</td>
-									</tr>
-									<tr>
-										<td class="product-name"><a routerLink="/simple-product">Office
-												Desk Sofa</a></td>
-										<td class="product-total"><span class="subtotal-amount">$199.00</span>
-										</td>
-									</tr>
-									<tr>
-										<td class="product-name"><a routerLink="/simple-product">Swivel
-												Sofa</a></td>
-										<td class="product-total"><span class="subtotal-amount">$233.99</span>
-										</td>
-									</tr>
-									<tr>
-										<td class="product-name"><a routerLink="/simple-product">Home
-												Alisa Sofa</a></td>
-										<td class="product-total"><span class="subtotal-amount">$223.00</span>
-										</td>
+												{{Content.title}}</a></td>
+										<td class="product-total"><span class="subtotal-amount">{{Content.quantity
+												* Content.newPrice}}</span></td>
 									</tr>
 									<tr>
 										<td class="order-subtotal"><span>Cart Subtotal</span></td>
 										<td class="order-subtotal-price"><span
-											class="order-subtotal-amount">$1683.50</span></td>
+											class="order-subtotal-amount">{{subTotal}}</span></td>
 									</tr>
 									<tr>
 										<td class="order-shipping"><span>Shipping</span></td>
-										<td class="shipping-price"><span>$30.00</span></td>
+										<td class="shipping-price"><span>{{shipValue}}</span></td>
+									</tr>
+									<tr>
+										<td class="order-shipping"><span>Tax</span></td>
+										<td class="shipping-price"><span>{{taxValue}}</span></td>
 									</tr>
 									<tr>
 										<td class="total-price"><span>Order Total</span></td>
 										<td class="product-subtotal"><span
-											class="subtotal-amount">$750.00</span></td>
+											class="subtotal-amount">{{grandTotal}}0</span></td>
 									</tr>
 								</tbody>
 							</table>

@@ -45,15 +45,14 @@
 									<span class="minus-btn" (click)="qtyMinus(Content)"><i
 										class='bx bx-minus'></i></span> <input
 										#inputValue_{{Content.id}} min="1"
-										value="{{Content.quantity}}"
-										(change)="quantityChange($event.target.value, Content)" /> <span
+										value="{{Content.quantity}}" /> <span
 										class="plus-btn" (click)="qtyPlus(Content)"><i
 										class='bx bx-plus'></i></span>
 								</div>
 							</td>
 
 							<td class="product-subtotal"><span class="subtotal-amount">{{Content.quantity
-									* Content.newPrice | currency:'INR'}}</span> <a
+									* Content.newPrice}}</span> <a
 								style="cursor: pointer;" (click)="removeFromCart(Content)"
 								class="remove"><i class='bx bx-trash'></i></a></td>
 						</tr>
@@ -63,16 +62,16 @@
 
 			<div class="cart-buttons">
 				<div class="row align-items-center">
-					<div class="col-lg-7 col-sm-12 col-md-7">
+					<!-- <div class="col-lg-7 col-sm-12 col-md-7">
 						<div class="shopping-coupon-code">
 							<input type="text" class="form-control" placeholder="Coupon code"
 								name="coupon-code" id="coupon-code">
 							<button type="submit">APPLY COUPON</button>
 						</div>
-					</div>
+					</div> -->
 
 					<div class="col-lg-5 col-sm-12 col-md-5 text-right">
-						<a routerLink="/shop-left-sidebar-1" class="default-btn"><i
+						<a style="cursor: pointer;" (click)="refreshCartProducts()" class="default-btn"><i
 							class='bx bx-refresh'></i> UPDATE CART</a>
 					</div>
 				</div>
@@ -80,14 +79,10 @@
 
 			<div class="cart-totals">
 				<ul>
-					<li>Subtotal <span>{{subTotal | currency:'INR':true:
-							'.1-3'}}</span></li>
-					<li>Shipping <span>{{shipValue | currency:'INR':true:
-							'.1-3'}}</span></li>
-					<li>GST <span>{{taxValue | currency:'INR':true:
-							'.1-3'}}</span></li>
-					<li>Total <span>{{grandTotal | currency:'INR':true:
-							'.1-3'}}</span></li>
+					<li>Subtotal <span>{{subTotal}}</span></li>
+					<li>Shipping <span>{{shipValue}}</span></li>
+					<li>GST <span>{{taxValue}}</span></li>
+					<li>Total <span>{{grandTotal}}</span></li>
 				</ul>
 				<a routerLink="/checkout" class="default-btn"><i
 					class='bx bx-paper-plane'></i> PROCEED TO CHECKOUT</a>

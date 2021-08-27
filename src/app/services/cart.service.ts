@@ -5,64 +5,42 @@ import { Product } from '../models/product';
 	providedIn: 'root'
 })
 export class CartService {
+	products!: Product[];
 
-  constructor() { }
- 
-	addItems(item: Product): void {
-		//this.removeItem(item);
-		let canItemAdd = true;
-		const products: Product[] = JSON.parse(localStorage.getItem("cart_item")) || [];
-		for (let i = 0; i < products.length; i++) {
-			if (products[i].id === item.id) {
-				//products[i].newPrice = products[i].newPrice + item.newPrice;
-				//products[i].oldPrice = products[i].oldPrice + item.oldPrice;
-				products[i].quantity = products[i].quantity + 1;
-				canItemAdd = false;
-				break;
-			}
-		}
-		if(canItemAdd){
-		 products.push(item);
-		}
-		setTimeout(() => {
-			localStorage.setItem("cart_item", JSON.stringify(products));
-			localStorage.setItem("cart_count", JSON.stringify(products.length));
-		}, 500);
+	constructor() {
+		this.products = JSON.parse(localStorage.getItem("cart_item")) || [];
+		localStorage.removeItem("cart_item");
 	}
 
-	getItems(): Product[] {
+	saveItem(item: Product, change: string, qty: number): void {
+		if (this.products.length === 0 || change == 'init') {
+			item.quantity = qty;
+			this.products.push(item);
+		} else {
+			for (let i = 0; i < this.products.length; i++) {
+				if (this.products[i].id === item.id) {
+					if (change === 'plus') this.products[i].quantity = this.products[i].quantity + qty;
+					else this.products[i].quantity = this.products[i].quantity - qty;
+					break;
+				}
+			}
+		}
+		localStorage.setItem("cart_item", JSON.stringify(this.products));
+	}
+
+	getAllItems(): Product[] {
 		const products: Product[] =
 			JSON.parse(localStorage.getItem("cart_item")) || [];
 		return products;
 	}
-	
-	qtyMinus(item: Product): void {
-		const products: Product[] = JSON.parse(localStorage.getItem("cart_item")) || [];
-		for (let i = 0; i < products.length; i++) {
-			if (products[i].id === item.id) {
-				//products[i].newPrice = products[i].newPrice + item.newPrice;
-				//products[i].oldPrice = products[i].oldPrice + item.oldPrice;
-				products[i].quantity = products[i].quantity - 1;
-				break;
-			}
-		}
-		setTimeout(() => {
-			localStorage.setItem("cart_item", JSON.stringify(products));
-			localStorage.setItem("cart_count", JSON.stringify(products.length));
-		}, 500);
-		
-	}
 
-	removeItem(item: Product): void {
-		const products: Product[] = JSON.parse(localStorage.getItem("cart_item"));
-		for (let i = 0; i < products.length; i++) {
-			if (products[i].id === item.id) {
-				products.splice(i, 1);
+	deleteItem(item: Product): void {
+		for (let i = 0; i < this.products.length; i++) {
+			if (this.products[i].id === item.id) {
+				this.products.splice(i, 1);
 				break;
 			}
 		}
-		setTimeout(() => {
-			localStorage.setItem("cart_item", JSON.stringify(products));
-		}, 500);
+		localStorage.setItem("cart_item", JSON.stringify(this.products));
 	}
 }
