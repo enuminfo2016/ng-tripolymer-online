@@ -57,7 +57,6 @@ export class CartPageComponent implements OnInit {
 		//item.quantity = item.quantity - 1;
 		this.cartService.qtyMinus(item);
 		this.getCartProducts();
-		console.log("cart count is "+localStorage.getItem("cart_count"));
 	}
 
 	qtyPlus(item: Product): void {
