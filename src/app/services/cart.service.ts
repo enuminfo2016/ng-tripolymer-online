@@ -19,8 +19,11 @@ export class CartService {
 		} else {
 			for (let i = 0; i < this.products.length; i++) {
 				if (this.products[i].id === item.id) {
-					if (change === 'plus') this.products[i].quantity = this.products[i].quantity + qty;
-					else this.products[i].quantity = this.products[i].quantity - qty;
+					if (change === 'plus') {
+						this.products[i].quantity = this.products[i].quantity + qty;
+					} else if (change === 'minus' && qty != 0) {
+						this.products[i].quantity = this.products[i].quantity - qty;
+					}
 					break;
 				}
 			}

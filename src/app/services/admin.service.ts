@@ -4,15 +4,15 @@ import { Observable } from 'rxjs';
 import { Category } from '../models/category';
 
 @Injectable({
-  providedIn: 'root'
+	providedIn: 'root'
 })
 export class AdminService {
-  // tslint:disable-next-line: no-inferrable-types
-  private apiUrl: string = 'http://localhost:8081/api/secured/v1';
+	// tslint:disable-next-line: no-inferrable-types
+	private apiUrl: string = 'http://localhost:8081/api/secured/v1';
 
-  constructor(private http: HttpClient) { }
+	constructor(private http: HttpClient) { }
 
-  allCategories(): Observable<Category[]> {
-    return this.http.get<Category[]>(this.apiUrl + '/category');
-  }
+	allCategories(): Observable<Category[]> {
+		return this.http.get<Category[]>(this.apiUrl + '/category');
+	}
 }

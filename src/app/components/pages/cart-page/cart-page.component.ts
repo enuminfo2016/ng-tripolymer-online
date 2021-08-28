@@ -14,6 +14,7 @@ export class CartPageComponent implements OnInit {
 	shipValue: number = 0;
 	taxValue: number = 0;
 	grandTotal: number = 0;
+	linkEnabled: boolean = false;
 
 	constructor(private cartService: CartService) { }
 
@@ -35,11 +36,12 @@ export class CartPageComponent implements OnInit {
 		this.taxValue = 0;
 		this.grandTotal = 0;
 		for (let i = 0; i < this.cartProducts.length; i++) {
-			this.subTotal = this.subTotal + this.cartProducts[i].newPrice * this.cartProducts[i].quantity;
+			this.subTotal = this.subTotal + (this.cartProducts[i].newPrice * this.cartProducts[i].quantity);
 		}
-		this.shipValue = this.grandTotal * 2 / 100;
-		this.taxValue = this.grandTotal * 18 / 100;
-		this.grandTotal = this.subTotal + this.shipValue + this.taxValue;
+		this.shipValue = this.subTotal * 0.02;
+		this.taxValue = this.subTotal * 0.18;
+		this.grandTotal = this.subTotal + (this.shipValue + this.taxValue);
+		if (this.cartProducts.length != 0) { this.linkEnabled = true; }
 	}
 
 	removeFromCart(item: Product): void {
