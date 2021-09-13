@@ -37,7 +37,7 @@ export class CheckoutPageComponent implements OnInit {
 		this.taxValue = this.subTotal * 0.18;
 		this.grandTotal = this.subTotal + (this.shipValue + this.taxValue);
 		this.checkoutForm = this.formBuilder.group({
-			countryName: ['India'],
+			country: ['India'],
 			firstName: ['', Validators.required ],
 			middleName: [''],
 			lastName: ['', Validators.required ],
@@ -45,10 +45,10 @@ export class CheckoutPageComponent implements OnInit {
 			addrValue1: ['', Validators.required ],
 			addrValue2: ['', Validators.required ],
 			addrValue3: [''],
-			stateName: ['Karnataka'],
-			cityName: ['Bangalore'],
-			locationName: ['', Validators.required ],
-			pinCode: ['', Validators.required ],
+			state: ['Karnataka'],
+			city: ['Bangalore'],
+			location: ['', Validators.required ],
+			pin: ['', Validators.required ],
 			email: ['', Validators.required ],
 			phone: ['', Validators.required ],
 			createAnAccount: [true],
@@ -56,7 +56,9 @@ export class CheckoutPageComponent implements OnInit {
 			cartTotal: [this.subTotal],
 			shipValue: [this.shipValue],
 			taxValue: [this.taxValue],
-			payment: ['directBankTransfer', Validators.required]
+			payment: ['directBankTransfer', Validators.required],
+			cartProducts: this.cartProducts,
+			notes: ''
 		});
 	}
 
@@ -79,10 +81,12 @@ export class CheckoutPageComponent implements OnInit {
 	};
 	options = [];
 	searchChange($event) {
-		console.log($event);
 	}
 	reset() {
 		this.resetOption = [];
 	}
 
+	placeOrder(): void {
+		// console.log(JSON.stringify(this.checkoutForm.value));
+	}
 }

@@ -12,17 +12,14 @@ import { Routes, RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { GalleryPageComponent } from './components/pages/gallery-page/gallery-page.component';
 import { ContactPageComponent } from './components/pages/contact-page/contact-page.component';
-import { HomeDemoTwoComponent } from './components/pages/home-demo-two/home-demo-two.component';
-import { NavbarStyleOneComponent } from './components/common/navbar-style-one/navbar-style-one.component';
-import { NavbarStyleTwoComponent } from './components/common/navbar-style-two/navbar-style-two.component';
+import { HomeComponent } from './components/pages/home/home.component';
+import { NavbarStyleComponent } from './components/common/navbar-style/navbar-style.component';
 import { PartnerComponent } from './components/common/partner/partner.component';
 import { TestimonialsComponent } from './components/common/testimonials/testimonials.component';
-import { HomeoneCategoriesComponent } from './components/pages/home-demo-one/homeone-categories/homeone-categories.component';
-import { FacilityStyleOneComponent } from './components/common/facility-style-one/facility-style-one.component';
 import { DealInThisWeekComponent } from './components/common/deal-in-this-week/deal-in-this-week.component';
-import { FacilityStyleTwoComponent } from './components/common/facility-style-two/facility-style-two.component';
+import { FacilityStyleComponent } from './components/common/facility-style/facility-style.component';
 import { SubscribeComponent } from './components/common/subscribe/subscribe.component';
-import { HometwoBannerComponent } from './components/pages/home-demo-two/hometwo-banner/hometwo-banner.component';
+import { HomeBannerComponent } from './components/pages/home/home-banner/home-banner.component';
 import { FooterComponent } from './components/common/footer/footer.component';
 import { NotFoundPageComponent } from './components/pages/not-found-page/not-found-page.component';
 import { ComingSoonPageComponent } from './components/pages/coming-soon-page/coming-soon-page.component';
@@ -43,8 +40,7 @@ import { WishlistPageComponent } from './components/pages/wishlist-page/wishlist
 import { AboutPageComponent } from './components/pages/about-page/about-page.component';
 import { VideoComponent } from './components/common/video/video.component';
 import { WhyChooseUsComponent } from './components/common/why-choose-us/why-choose-us.component';
-import { RoomsPageComponent } from './components/pages/rooms-page/rooms-page.component';
-import { ShopFullWidthPageTwoComponent } from './components/pages/shop-full-width-page-two/shop-full-width-page-two.component';
+import { ShopFullWidthPageComponent } from './components/pages/shop-full-width-page/shop-full-width-page.component';
 import { AuthGuard } from './services/auth.guard';
 import { AuthenticationService } from './services/authentication.service';
 import { AdminService } from './services/admin.service';
@@ -52,12 +48,11 @@ import { OnlineService } from './services/online.service';
 import { CartService } from './services/cart.service';
 
 const routes: Routes = [
-	{ path: '', component: HomeDemoTwoComponent },
+	{ path: '', component: HomeComponent },
 	{ path: 'about', component: AboutPageComponent },
-	{ path: 'shop-full-width-2/:id', component: ShopFullWidthPageTwoComponent },
+	{ path: 'shop-full-width/:id', component: ShopFullWidthPageComponent },
 	{ path: 'sticky-product/:id', component: StickyProductPageComponent },
 	{ path: 'slider-product/:id', component: SliderProductPageComponent },
-	{ path: 'rooms', component: RoomsPageComponent },
 	{ path: 'customer-service', component: CustomerServicePageComponent },
 	{ path: 'profile-authentication', component: MyAccountPageComponent },
 	{ path: 'order-tracking', component: OrderTrackingPageComponent, canActivate: [AuthGuard] },
@@ -76,17 +71,14 @@ const routes: Routes = [
 		AppComponent,
 		GalleryPageComponent,
 		ContactPageComponent,
-		HomeDemoTwoComponent,
-		NavbarStyleOneComponent,
-		NavbarStyleTwoComponent,
+		HomeComponent,
+		NavbarStyleComponent,
 		PartnerComponent,
 		TestimonialsComponent,
-		HomeoneCategoriesComponent,
-		FacilityStyleOneComponent,
 		DealInThisWeekComponent,
-		FacilityStyleTwoComponent,
+		FacilityStyleComponent,
 		SubscribeComponent,
-		HometwoBannerComponent,
+		HomeBannerComponent,
 		FooterComponent,
 		NotFoundPageComponent,
 		ComingSoonPageComponent,
@@ -106,7 +98,7 @@ const routes: Routes = [
 		AboutPageComponent,
 		VideoComponent,
 		WhyChooseUsComponent,
-		ShopFullWidthPageTwoComponent,
+		ShopFullWidthPageComponent,
 		SliderProductPageComponent
 	],
 	imports: [

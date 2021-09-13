@@ -24,4 +24,8 @@ export class OnlineService {
 	allLocations(value: string): Observable<Location[]> {
 		return this.http.get<Location[]>(this.apiUrl + '/locationsByCity/' + value);
 	}
+	
+	saveUserOrder(object: any) {
+		this.http.post(this.apiUrl + '', object);
+	}
 }
